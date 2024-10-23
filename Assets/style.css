@@ -1,4 +1,4 @@
-/* CSS styles */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
@@ -106,7 +106,7 @@ img {
     padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    animation: bounce 1s infinite alternate; /* Apply bounce animation */
+    /*animation: bounce 1s infinite alternate; /* Apply bounce animation */
 }
 
 form {
@@ -158,6 +158,7 @@ form button:hover {
         flex-direction: column; /* Stacks skills vertically on smaller screens */
     }
 }
+/*Responsive Code*/
 
 @media only screen and (max-width: 480px) {
     header, footer {
@@ -181,14 +182,14 @@ form button:hover {
 }
 
 
-@keyframes bounce {
+/*@keyframes bounce {
     from {
         transform: translateY(0);
     }
     to {
         transform: translateY(-10px);
     }
-}
+}*/
 
 
 .horizontal-scroll {
@@ -196,25 +197,21 @@ form button:hover {
     width: 100%; /* Occupy full width of the screen */
 }
 
+/*Changed to Grid*/
 .icon-container {
-    display: flex; /* Display icons in a row */
-    animation: scrollAnimation 10s linear infinite; /* Adjust animation duration as needed */
-    width: max-content; /* Make the container width fit its content */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 10px; 
+    width: 100%;
+    justify-items: center; 
+    align-items: center; 
+    padding: 10px; 
 }
 
 .icon-container img {
     width: 60px; /* Adjust the width of icons as needed */
     height: 60px; /* Adjust the height of icons as needed */
     margin-right: 20px; /* Adjust margin between icons as needed */
-}
-
-@keyframes scrollAnimation {
-    0% {
-        transform: translateX(100vw); /* Start from the right edge of the viewport */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to the left edge */
-    }
 }
 
 /* CSS for Dark Mode */
